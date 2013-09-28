@@ -1,6 +1,5 @@
 .classpath
 .project
-nbactions.xml
-/.settings
-/target
-/test-output
+.settings
+target
+test-output
