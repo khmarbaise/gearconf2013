@@ -50,7 +50,7 @@
 
   <modules>
     <module>mod-war</module>
-    <module>mod-api</module>
+    <module>mod-prop</module>
     <module>mod-it</module>
   </modules>
 </project>

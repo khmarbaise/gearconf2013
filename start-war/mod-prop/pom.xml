@@ -11,8 +11,8 @@
     <groupId>com.soebes.training.module.it-container.selenium</groupId>
   </parent>
 
-  <artifactId>mod-api</artifactId>
-  <name>MaUI Test Guide :: IT Container - API</name>
+  <artifactId>mod-prop</artifactId>
+  <name>MaUI Test Guide :: IT Container - PROP</name>
 
   <dependencies>
     <dependency>
