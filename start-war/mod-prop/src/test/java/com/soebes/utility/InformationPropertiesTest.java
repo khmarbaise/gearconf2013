@@ -15,4 +15,12 @@ public class InformationPropertiesTest {
         InformationProperties ip = new InformationProperties(propertiesFile);
         assertThat(ip.getServer()).isEqualTo(new URL("http://www.test-server.com"));
     }
+    
+    @Test
+    public void shouldReturnDefaultValueIfPropertyFileDoesNotExists() throws IOException {
+        String propertiesFile = "/test.properties";
+        InformationProperties ip = new InformationProperties(propertiesFile);
+        assertThat(ip.getServer()).isEqualTo(new URL(InformationProperties.SERVER_DEFAULT));
+        
+    }
 }
