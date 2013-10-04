@@ -1,0 +1,70 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>parent</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <groupId>com.soebes.training.module.it-container.selenium</groupId>
+  </parent>
+
+  <artifactId>mod-package</artifactId>
+  <packaging>pom</packaging>
+  <name>MaUI Test Guide :: IT Container - Mod-Package</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>mod-war</artifactId>
+      <version>${project.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+
+        <groupId>com.soebes.maven.plugins</groupId>
+        <artifactId>iterator-maven-plugin</artifactId>
+        <version>0.2</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>executor</goal>
+            </goals>
+            <configuration>
+              <items>
+                <item>dev</item>
+                <item>test</item>
+                <item>qa</item>
+                <item>production</item>
+              </items>
+              <pluginExecutors>
+                <pluginExecutor>
+                  <goal>single</goal>
+                  <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                  </plugin>
+                  <configuration>
+                    <descriptors>
+                      <descriptor>${project.basedir}/src/main/assembly/iterator.xml</descriptor>
+                    </descriptors>
+                  </configuration>
+                </pluginExecutor>
+              </pluginExecutors>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>
+
