@@ -27,7 +27,6 @@
   <build>
     <plugins>
       <plugin>
-
         <groupId>com.soebes.maven.plugins</groupId>
         <artifactId>iterator-maven-plugin</artifactId>
         <version>0.2</version>
