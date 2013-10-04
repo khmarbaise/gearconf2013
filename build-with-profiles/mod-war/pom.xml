@@ -86,9 +86,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <configuration>
-          <webappDirectory>${project.build.directory}/tmp</webappDirectory>
-        </configuration>
       </plugin>
     </plugins>
   </build>
